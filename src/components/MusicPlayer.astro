@@ -1,0 +1,25 @@
+---
+// MusicPlayer.astro
+---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<div id="player" class="aplayer"></div>
+
+<script>
+  // 等待页面加载完成后初始化
+  document.addEventListener('DOMContentLoaded', () => {
+    const ap = new window.APlayer({
+      container: document.getElementById('player'),
+      fixed: true,
+      mini: true,
+      theme: '#81c1ff',
+      audio: [{
+        name: 'BGM',
+        artist: 'Hatsune Miku',
+        url: '/public/music/bgm.mp3',   // 确保你的文件在 public/music/bgm.mp3
+        cover: '/public/music/cover.jpg' // 封面图
+      }]
+    });
+  });
+</script>

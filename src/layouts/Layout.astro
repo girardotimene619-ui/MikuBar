@@ -1,4 +1,5 @@
 ---
+import MusicPlayer from '../components/MusicPlayer.astro';
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
@@ -156,6 +157,7 @@ const bannerOffset =
 
 		<!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
 		<div id="page-height-extend" class="hidden h-[300vh]"></div>
+                <MusicPlayer />
 	</body>
 </html>
 
