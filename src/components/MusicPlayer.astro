@@ -1,25 +1,33 @@
 ---
-// MusicPlayer.astro
+/**
+ * MusicPlayer.astro - 修复 API 连接问题版本
+ */
 ---
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" defer></script>
 
-<div id="player" class="aplayer"></div>
+<div class="music-player-container">
+  <meting-js
+    server="netease"
+    type="playlist"
+    id="8544925678"
+    api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&referrer=:referrer&m_type=:m_type"
+    fixed="true"
+    mini="true"
+    theme="#81c1ff"
+    order="list"
+    loop="all"
+    list-folded="true"
+    autoplay="false"
+    mutex="true"
+  >
+  </meting-js>
+</div>
 
-<script>
-  // 等待页面加载完成后初始化
-  document.addEventListener('DOMContentLoaded', () => {
-    const ap = new window.APlayer({
-      container: document.getElementById('player'),
-      fixed: true,
-      mini: true,
-      theme: '#81c1ff',
-      audio: [{
-        name: 'BGM',
-        artist: 'Hatsune Miku',
-        url: '/music/bgm.mp3',   // 确保你的文件在 public/music/bgm.mp3
-        cover: '/music/cover.jpg' // 封面图
-      }]
-    });
-  });
-</script>
+<style is:global>
+  .aplayer.aplayer-fixed {
+    z-index: 1000 !important;
+  }
+</style>

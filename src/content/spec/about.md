@@ -1,9 +1,9 @@
 # About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+这里是MikuBar，但在我画工了得之前只会有别人家的miku
 
-::github{repo="saicaca/fuwari"}
+::github{repo="girardotimene619-ui/MikuBar"}
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+> ### Sources used in this site
+> - too many images to list all
+> - some codes wriiten by gemini and most codes from github
+> - the music is from my playlist of netease
